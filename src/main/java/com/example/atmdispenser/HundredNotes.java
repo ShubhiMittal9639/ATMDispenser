@@ -7,7 +7,7 @@ public class HundredNotes extends ATMDispenser {
     }
 
     @Override
-    public int dispense(Integer amount) {
+    public int dispense(Integer amount) throws Exception{
         if (amount >= 100) {
             int rem = amount % 100;
             int notes = amount / 100;

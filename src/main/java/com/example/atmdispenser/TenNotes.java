@@ -5,7 +5,7 @@ public class TenNotes extends ATMDispenser{
     TenNotes(ATMDispenser dispenser) {
         super(dispenser);
     }
-    public int dispense(Integer amount){
+    public int dispense(Integer amount) throws Exception {
         if (amount >= 10) {
             int notes = amount / 10;
             int rem = amount % 10;

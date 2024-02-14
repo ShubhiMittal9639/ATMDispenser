@@ -3,13 +3,13 @@ package com.example.atmdispenser;
 public abstract class ATMDispenser {
     ATMDispenser nextDispenser;
 
-    public int dispense(Integer amount) {
+    public int dispense(Integer amount) throws Exception{
         int total=0;
         if (nextDispenser != null) {
             total+=nextDispenser.dispense(amount);
             return total;
         } else if (amount != 0) {
-            System.out.println("cannot make exact value");
+            throw new Exception("Exact value not formed");
         }
         return 0;
     }
